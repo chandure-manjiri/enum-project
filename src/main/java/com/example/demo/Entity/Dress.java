@@ -14,6 +14,9 @@ import lombok.*;
 @NoArgsConstructor
 @Table(name = "dresses")
 public class Dress {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
 
     private String name;
 
