@@ -3,6 +3,7 @@ package com.example.demo.Service;
 import com.example.demo.Dto.DressCreationDto;
 import com.example.demo.Dto.DressResponseDto;
 import com.example.demo.Entity.Dress;
+import com.example.demo.Mapper.DressMapper;
 import com.example.demo.Repository.DressRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -11,7 +12,7 @@ import org.springframework.stereotype.Service;
 public class DressService {
 
 
-    final DressMapper dressMapper;
+    private final DressMapper dressMapper;
 
     private final DressRepository dressRepository;
 

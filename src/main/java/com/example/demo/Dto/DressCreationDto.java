@@ -20,8 +20,8 @@ public class DressCreationDto {
     @Enumerated(EnumType.STRING)
     private DressColor color;
 
-    @Enumerated(EnumType.STRING)
-    private DressSize size;
+
+    private int size;
 
     @Enumerated(EnumType.STRING)
     private DressType type;
