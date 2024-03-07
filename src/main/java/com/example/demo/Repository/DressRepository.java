@@ -11,16 +11,16 @@ import java.util.List;
 
 @Repository
 public interface DressRepository extends JpaRepository<Dress, Integer> {
-    List<Dress> findByDresstypeAndSizeAndColor(DressType dressType, DressSize dressSize, DressColor dressColor);
-    List<Dress> findByDresstypeAndSizeOrColor(DressType dressType, DressSize dressSize, DressColor dressColo);
+    List<Dress> findByDressTypeAndDressSizeAndDressColor(DressType dressType, DressSize dressSize, DressColor dressColor);
+    List<Dress> findByDressTypeAndDressSizeOrPrice(DressType dressType, DressSize dressSize, Long price);
 
-    List<Dress> findByColorNot(DressColor dressColor);
+    List<Dress> findByDressColorNot(DressColor dressColor);
 
     List<Dress> findByPriceBetween(Long price1, Long price2);
 
     List<Dress> findByBrandIn(String[] brands);
 
-    List<Dress> findBySizeGreaterThan(DressSize dressSize);
+    List<Dress> findByPriceGreaterThan(Long price);
 
     List<Dress> findByPriceLessThan(Long price);
 

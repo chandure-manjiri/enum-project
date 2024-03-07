@@ -26,16 +26,16 @@ public class Dress {
     private String brand;
 
     @Enumerated(EnumType.STRING)
-    @Column(name = "color")
-    private DressColor color;
+    @Column(name = "dressColor")
+    private DressColor dressColor;
 
     @Enumerated(EnumType.STRING)
-    @Column(name = "size")
-    private DressSize size;
+    @Column(name = "dressSize")
+    private DressSize dressSize;
 
     @Enumerated(EnumType.STRING)
-    @Column(name = "type")
-    private DressType type;
+    @Column(name = "dressType")
+    private DressType dressType;
 
     @Column(name = "price")
     private Long price;

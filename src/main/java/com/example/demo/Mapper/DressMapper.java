@@ -15,9 +15,9 @@ public interface DressMapper {
     @Mapping(source ="name" , target ="name")
     @Mapping(source = "brand", target = "brand")
     @Mapping(source = "price", target = "price")
-    @Mapping(source = "type", target = "type")
-    @Mapping(source = "color", target = "color")
-    @Mapping(target = "size", expression = "java(convertToDressSizeEnum(dressCreationDto.getSize()))")
+    @Mapping(source = "type", target = "dressType")
+    @Mapping(source = "color", target = "dressColor")
+    @Mapping(target = "dressSize", expression = "java(convertToDressSizeEnum(dressCreationDto.getSize()))")
     public Dress toEntity(DressCreationDto dressCreationDto);
 
     default DressSize convertToDressSizeEnum(int size){
@@ -27,9 +27,9 @@ public interface DressMapper {
     @Mapping(source ="name" , target ="name")
     @Mapping(source = "brand", target = "brand")
     @Mapping(source = "price", target = "price")
-    @Mapping(source = "type", target = "type")
-    @Mapping(source = "color", target = "color")
-    @Mapping(source = "size", target = "size")
+    @Mapping(source = "dressType", target = "type")
+    @Mapping(source = "dressColor", target = "color")
+    @Mapping(source = "dressSize", target = "size")
     public DressResponseDto toDto(Dress dress);
 
     List<DressResponseDto> toDressResponseDtoList(List<Dress> dresses);
