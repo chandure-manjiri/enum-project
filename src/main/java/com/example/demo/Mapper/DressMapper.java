@@ -14,21 +14,11 @@ public interface DressMapper {
     @Mapping(source = "brand", target = "brand")
     @Mapping(source = "type", target = "type")
     @Mapping(source = "color", target = "color")
-    @Mapping(source = "size", target = "size", expression = "java(convertToDressSizeEnum(dressCreationDto.getSize()))")
+    @Mapping(target = "size", expression = "java(convertToDressSizeEnum(dressCreationDto.getSize()))")
     public Dress toEntity(DressCreationDto dressCreationDto);
 
     default DressSize convertToDressSizeEnum(int size){
-        DressSize dressSize = null;
-        if(size > 0 & size <= 30){
-                dressSize = DressSize.S;
-        }
-        else if(size > 30 & size <= 49){
-                dressSize = DressSize.M;
-        }
-        else if(size >= 50){
-               dressSize = DressSize.L;
-        }
-        return dressSize;
+       return DressSize.convertToEnum(size);
     }
 
     @Mapping(source ="name" , target ="name")
