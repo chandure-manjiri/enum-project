@@ -1,8 +1,8 @@
 package com.example.demo.Dto;
 
-import com.example.demo.Enums.DressColor;
-import com.example.demo.Enums.DressSize;
-import com.example.demo.Enums.DressType;
+import com.example.demo.Enum.DressColor;
+import com.example.demo.Enum.DressSize;
+import com.example.demo.Enum.DressType;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
 import lombok.*;

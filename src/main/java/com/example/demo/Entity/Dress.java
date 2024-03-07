@@ -1,8 +1,8 @@
 package com.example.demo.Entity;
 
-import com.example.demo.Enums.DressColor;
-import com.example.demo.Enums.DressSize;
-import com.example.demo.Enums.DressType;
+import com.example.demo.Enum.DressColor;
+import com.example.demo.Enum.DressSize;
+import com.example.demo.Enum.DressType;
 import jakarta.persistence.*;
 import lombok.*;
 

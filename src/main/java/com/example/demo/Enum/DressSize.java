@@ -1,4 +1,4 @@
-package com.example.demo.Enums;
+package com.example.demo.Enum;
 
 public enum DressSize {
     S,M,L
