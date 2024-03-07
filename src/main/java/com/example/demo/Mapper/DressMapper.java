@@ -7,6 +7,8 @@ import com.example.demo.Enum.DressSize;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 
+import java.util.List;
+
 @Mapper(componentModel = "spring")
 public interface DressMapper {
 
@@ -29,5 +31,7 @@ public interface DressMapper {
     @Mapping(source = "color", target = "color")
     @Mapping(source = "size", target = "size")
     public DressResponseDto toDto(Dress dress);
+
+    List<DressResponseDto> toDressResponseDtoList(List<Dress> dresses);
 
 }
