@@ -36,4 +36,7 @@ public class Dress {
     @Enumerated(EnumType.STRING)
     @Column(name = "type")
     private DressType type;
+
+    @Column(name = "price")
+    private Long price;
 }

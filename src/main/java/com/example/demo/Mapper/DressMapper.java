@@ -12,6 +12,7 @@ public interface DressMapper {
 
     @Mapping(source ="name" , target ="name")
     @Mapping(source = "brand", target = "brand")
+    @Mapping(source = "price", target = "price")
     @Mapping(source = "type", target = "type")
     @Mapping(source = "color", target = "color")
     @Mapping(target = "size", expression = "java(convertToDressSizeEnum(dressCreationDto.getSize()))")
@@ -23,6 +24,7 @@ public interface DressMapper {
 
     @Mapping(source ="name" , target ="name")
     @Mapping(source = "brand", target = "brand")
+    @Mapping(source = "price", target = "price")
     @Mapping(source = "type", target = "type")
     @Mapping(source = "color", target = "color")
     @Mapping(source = "size", target = "size")

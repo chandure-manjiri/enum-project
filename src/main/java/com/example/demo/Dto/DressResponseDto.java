@@ -27,4 +27,6 @@ public class DressResponseDto {
 
     @Enumerated(EnumType.STRING)
     private DressType type;
+
+    private Long price;
 }
