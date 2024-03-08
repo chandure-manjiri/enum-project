@@ -1,6 +1,6 @@
 package com.example.demo.Repository;
 
-import com.example.demo.Entity.Dress;
+import com.example.demo.Entity.DressEntity;
 import com.example.demo.Enum.DressColor;
 import com.example.demo.Enum.DressSize;
 import com.example.demo.Enum.DressType;
@@ -10,19 +10,19 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface DressRepository extends JpaRepository<Dress, Integer> {
-    List<Dress> findByDressTypeAndDressSizeAndDressColor(DressType dressType, DressSize dressSize, DressColor dressColor);
-    List<Dress> findByDressTypeAndDressSizeOrPrice(DressType dressType, DressSize dressSize, Long price);
+public interface DressRepository extends JpaRepository<DressEntity, Integer> {
+    List<DressEntity> findByDressTypeAndDressSizeAndDressColor(DressType dressType, DressSize dressSize, DressColor dressColor);
+    List<DressEntity> findByDressTypeAndDressSizeOrPrice(DressType dressType, DressSize dressSize, Long price);
 
-    List<Dress> findByDressColorNot(DressColor dressColor);
+    List<DressEntity> findByDressColorNot(DressColor dressColor);
 
-    List<Dress> findByPriceBetween(Long price1, Long price2);
+    List<DressEntity> findByPriceBetween(Long price1, Long price2);
 
-    List<Dress> findByBrandIn(String[] brands);
+    List<DressEntity> findByBrandIn(String[] brands);
 
-    List<Dress> findByPriceGreaterThan(Long price);
+    List<DressEntity> findByPriceGreaterThan(Long price);
 
-    List<Dress> findByPriceLessThan(Long price);
+    List<DressEntity> findByPriceLessThan(Long price);
 
 
 }

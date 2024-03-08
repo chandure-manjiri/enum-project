@@ -12,8 +12,8 @@ import lombok.*;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name = "dresses")
-public class Dress {
+@Table(name = "dress")
+public class DressEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
@@ -26,15 +26,15 @@ public class Dress {
     private String brand;
 
     @Enumerated(EnumType.STRING)
-    @Column(name = "dressColor")
+    @Column(name = "dress_color")
     private DressColor dressColor;
 
     @Enumerated(EnumType.STRING)
-    @Column(name = "dressSize")
+    @Column(name = "dress_size")
     private DressSize dressSize;
 
     @Enumerated(EnumType.STRING)
-    @Column(name = "dressType")
+    @Column(name = "dress_type")
     private DressType dressType;
 
     @Column(name = "price")

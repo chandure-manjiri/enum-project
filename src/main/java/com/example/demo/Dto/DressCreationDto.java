@@ -17,13 +17,10 @@ public class DressCreationDto {
 
     private String brand;
 
-    @Enumerated(EnumType.STRING)
     private DressColor color;
-
 
     private int size;
 
-    @Enumerated(EnumType.STRING)
     private DressType type;
 
     private Long price;

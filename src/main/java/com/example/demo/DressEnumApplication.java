@@ -24,10 +24,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 		)
 )
 @SpringBootApplication
-public class DressenumApplication {
+public class DressEnumApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(DressenumApplication.class, args);
+		SpringApplication.run(DressEnumApplication.class, args);
 	}
 
 }
